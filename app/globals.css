@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
 body {
-  background-color: #3625cc; 
+  background: linear-gradient(180deg,#180e50 42%, #1C125B 78%);
   height: 100vh;
 }
