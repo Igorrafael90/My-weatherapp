@@ -1,12 +1,12 @@
 export function getweatherimage(weatherName: string): string {
     const weathers: { [key: string]: string } = {
-        Clear: "/icons/sun.svg",
-        Clouds: "/icons/cloud.svg",
-        Rain: "/icons/rain.svg",
-        Snow: "/icons/snow.svg",
-        Thunderstorm: "/icons/thunder.svg",
-        Drizzle: "/icons/drizzle.svg",
-        Mist: "/icons/mist.svg",
+        Clear: "/sun.png",
+        Clouds: "/cloud.png",
+        Rain: "/rain.png",
+        Snow: "/snow.png",
+        Thunderstorm: "/thunder.png",
+        Drizzle: "/drizzle.png",
+        Mist: "/mist.png",
     };
-    return weathers[weatherName] || "/icons/sun.svg"
+    return weathers[weatherName] || "/sun.png"
 }

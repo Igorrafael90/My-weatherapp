@@ -1,6 +1,39 @@
 @import "tailwindcss";
 
 body {
-  background: linear-gradient(180deg,#180e50 42%, #1C125B 78%);
+  background: linear-gradient(180deg, #180e50 42%, #1C125B 78%);
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
   height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  z-index: -1;
+}
+
+.icone{
+  width: 80px;
+  height: 80px;
+  background-color: #534BA0;
+  box-shadow: 1px 2px #766BDE;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: anima linear infinite;
+  animation-duration: calc(300s / var(--i));
+}
+
+@keyframes anima {
+  0%{
+    transform: translateY(200vh) scale(0) rotate(0deg);
+  }
+  100%{
+    transform: translateY(-10vh) scale(1) rotate(360deg);
+  }
 }
