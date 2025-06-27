@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --shadow-Page: -6px 5px 2px #766BDE;
+}
+
 body {
   background: linear-gradient(180deg, #180e50 42%, #1C125B 78%);
   background-attachment: fixed;
@@ -10,14 +14,14 @@ body {
 
 .container {
   width: 100%;
-  height: 200vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   position: absolute;
   z-index: -1;
 }
 
-.icone{
+.icone {
   width: 80px;
   height: 80px;
   background-color: #534BA0;
@@ -29,11 +33,28 @@ body {
   animation-duration: calc(300s / var(--i));
 }
 
+.scale{
+  animation: grow 2s ease-in-out;
+}
+
 @keyframes anima {
-  0%{
+  0% {
     transform: translateY(200vh) scale(0) rotate(0deg);
   }
-  100%{
+
+  100% {
     transform: translateY(-10vh) scale(1) rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
   }
 }
